@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UpdateCars = props => {
+const Update = props => {
     return (
         <div>
 
@@ -8,4 +8,6 @@ const UpdateCars = props => {
     );
 };
 
-export default UpdateCars;
+
+
+export default Update;

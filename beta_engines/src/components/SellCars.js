@@ -1,6 +1,7 @@
 import React from 'react';
 
-const SellCars = props => {
+
+const Sell = props => {
     return (
         <div>
 
@@ -9,4 +10,5 @@ const SellCars = props => {
 };
 
 
-export default SellCars;
+
+export default Sell;
