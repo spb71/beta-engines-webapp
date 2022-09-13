@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const BuyCars = props => {
+const ViewCars = props => {
     return (
         <div>
 
@@ -10,4 +10,4 @@ const BuyCars = props => {
 };
 
 
-export default BuyCars;
+export default ViewCars;
