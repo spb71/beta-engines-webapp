@@ -1,5 +1,5 @@
-<<<<<<< Updated upstream
-=======
+
+
 import React from 'react';
 
 const RegisterForm = props => {
@@ -54,4 +54,4 @@ const RegisterForm = props => {
     );
 };
 export default RegisterForm;
->>>>>>> Stashed changes
+
