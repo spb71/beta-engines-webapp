@@ -3,6 +3,26 @@ import { Link } from 'react-router-dom';
 
 const RegisterForm = props => {
 
+    return (
+
+        <div style={{ border: "1px black solid", padding: "15px", margin: "15px" }}>
+
+        
+
+            <h1>Register</h1>
+            <form>
+                <fieldset>
+                    <legend>Enter Information to Register</legend>
+
+
+
+
+                    <label classname='form-label'>First Name:</label>
+                    <input className='form-control' type="text" placeholder="Enter First Name" />
+                    <br />
+                    
+
+
     const submit = (event) => {
         event.preventDefault();
     }
@@ -13,7 +33,10 @@ const RegisterForm = props => {
 
 
 
+                </fieldset>
+
             <h1>Register</h1>
+
             <form onSubmit={submit}>
                 <h3>Sign Up</h3>
                 <div className="mb-3">
@@ -52,6 +75,7 @@ const RegisterForm = props => {
                 <p className="forgot-password text-right">
                     Already registered? <Link className="nav-link" to="/log" style={{ "textDecoration": "underline", "color": "blue" }}>Sign in</Link>
                 </p>
+
             </form>
         </div>
     );
