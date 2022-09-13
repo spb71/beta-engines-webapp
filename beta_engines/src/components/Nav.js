@@ -22,15 +22,16 @@ const Nav = props => {
                                 <Link className="nav-link" to="log">Login</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="log">Cars for Sale</Link>
+                                <Link className="nav-link" to="view">Cars for Sale</Link>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown link
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/">Sell Cars</a></li>
-                                    <li><a className="dropdown-item" href="/">Update Sale Information</a></li>
+                                    <Link className="nav-link" to="buy">Buy Cars</Link>
+                                    <Link className="nav-link" to="sell">Sell Cars</Link>
+                                    <Link className="nav-link" to="update">Update Sale Information</Link>
                                 </ul>
                             </li>
                         </ul>
