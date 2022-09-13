@@ -6,7 +6,7 @@ import LoginForm from './components/LoginForm';
 import Nav from './components/Nav';
 import RegisterForm from './components/RegisterForm';
 import SellCars from './components/SellCars';
-import UpdateCars  from './components/UpdateCars';
+import UpdateCars from './components/UpdateCars';
 import ViewCars from './components/ViewCars';
 import BuyCars from './components/BuyCars';
 
