@@ -2,7 +2,9 @@ import React from 'react';
 
 const LoginForm = props => {
 
-    const submit = () => {
+    const submit = (event) => {
+
+        event.preventDefault();
 
     }
 
@@ -11,18 +13,40 @@ const LoginForm = props => {
         <div style={{ border: "1px black solid", padding: "15px", margin: "15px" }}>
 
             <form onSubmit={submit}>
-
-                <div className='mb-3'>
-                    <label htmlFor='color' className='form-label'>
-                        Favorite Color
-                    </label>
-
-                    <input className='form-control'
-                        type="text"
-                        id='color' />
-
+                <h3>Sign In</h3>
+                <div className="mb-3">
+                    <label>Email address</label>
+                    <input
+                        type="email"
+                        className="form-control"
+                        placeholder="Enter email"
+                    />
                 </div>
-
+                <div className="mb-3">
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        className="form-control"
+                        placeholder="Enter password"
+                    />
+                </div>
+                <div className="mb-3">
+                    <div className="custom-control custom-checkbox">
+                        <input
+                            type="checkbox"
+                            className="custom-control-input"
+                            id="customCheck1"
+                        />
+                        <label className="custom-control-label" htmlFor="customCheck1">
+                            Remember me
+                        </label>
+                    </div>
+                </div>
+                <div className="d-grid">
+                    <button type="submit" className="btn btn-primary">
+                        Submit
+                    </button>
+                </div>
             </form>
 
 
