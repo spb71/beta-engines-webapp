@@ -4,10 +4,11 @@ import React from 'react';
 const RegisterForm = props => {
     return (
 
-        <div className='nb-3'>
+        <div style={{ border: "1px black solid", padding: "15px", margin: "15px" }}>
 
         
 
+<<<<<<< Updated upstream
             <h1>Register</h1>
             <form>
                 <fieldset>
@@ -83,6 +84,47 @@ const RegisterForm = props => {
                     <input type="submit" value="Register" />
 
                 </fieldset>
+=======
+            
+            <form onSubmit={submit}>
+                <h3>Sign Up</h3>
+                <div className="mb-3">
+                    <label>First name</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="First name"
+                    />
+                </div>
+                <div className="mb-3">
+                    <label>Last name</label>
+                    <input type="text" className="form-control" placeholder="Last name" />
+                </div>
+                <div className="mb-3">
+                    <label>Email address</label>
+                    <input
+                        type="email"
+                        className="form-control"
+                        placeholder="Enter email"
+                    />
+                </div>
+                <div className="mb-3">
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        className="form-control"
+                        placeholder="Enter password"
+                    />
+                </div>
+                <div className="d-grid">
+                    <button type="submit" className="btn btn-primary">
+                        Sign Up
+                    </button>
+                </div>
+                <p className="forgot-password text-right">
+                    Already registered? <Link className="nav-link" to="/log" style={{ "textDecoration": "underline", "color": "blue" }}>Sign in</Link>
+                </p>
+>>>>>>> Stashed changes
             </form>
         </div>
     );
