@@ -1,43 +1,46 @@
-import React from 'react';
+import React, {useState} from 'react';
+import UserApi from '../apis/UserApi';
 import { Link } from 'react-router-dom';
 
 const RegisterForm = props => {
+
+    
+
+        const [fname, setFname] = useState('')
+        const [lname, setLname] = useState('')
+        const [email, setEmail] = useState('')
+        const [password, setPassword] = useState('')
+     
+
+        const handleSubmit = (event) => {
+            const user = {
+                "fname": fname,
+                "lname": lname,
+                "email": email,
+                "password": password
+                
+            }
+
+            UserApi.addUsers(user)
+
+            setFname('')
+            setLname('')
+            setEmail('')
+            setPassword('')
+            
+
+
+        }
+
+    
 
     return (
 
         <div style={{ border: "1px black solid", padding: "15px", margin: "15px" }}>
 
-        
-
-            <h1>Register</h1>
-            <form>
-                <fieldset>
-                    <legend>Enter Information to Register</legend>
 
 
-
-
-                    <label classname='form-label'>First Name:</label>
-                    <input className='form-control' type="text" placeholder="Enter First Name" />
-                    <br />
-                    
-
-
-    const submit = (event) => {
-        event.preventDefault();
-    }
-
-    return (
-
-        <div className='nb-3'>
-
-
-
-                </fieldset>
-
-            <h1>Register</h1>
-
-            <form onSubmit={submit}>
+            <form onSubmit={handleSubmit}>
                 <h3>Sign Up</h3>
                 <div className="mb-3">
                     <label>First name</label>
@@ -45,11 +48,12 @@ const RegisterForm = props => {
                         type="text"
                         className="form-control"
                         placeholder="First name"
+                        onChange={ (event) => { setFname(event.target.value) } }
                     />
                 </div>
                 <div className="mb-3">
                     <label>Last name</label>
-                    <input type="text" className="form-control" placeholder="Last name" />
+                    <input type="text" className="form-control" placeholder="Last name" onChange={ (event) => { setLname(event.target.value) } }/>
                 </div>
                 <div className="mb-3">
                     <label>Email address</label>
@@ -57,6 +61,7 @@ const RegisterForm = props => {
                         type="email"
                         className="form-control"
                         placeholder="Enter email"
+                        onChange={ (event) => { setEmail(event.target.value) } }
                     />
                 </div>
                 <div className="mb-3">
@@ -65,10 +70,11 @@ const RegisterForm = props => {
                         type="password"
                         className="form-control"
                         placeholder="Enter password"
+                        onChange={ (event) => { setPassword(event.target.value) } }
                     />
                 </div>
                 <div className="d-grid">
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" value='Create' className="btn btn-primary">
                         Sign Up
                     </button>
                 </div>
@@ -82,5 +88,3 @@ const RegisterForm = props => {
 };
 
 export default RegisterForm;
-
-

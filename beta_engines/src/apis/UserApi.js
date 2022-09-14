@@ -1,31 +1,31 @@
 const URI = ""
 
-const CarApi = {
-    getCars: (setCars) => {
+const UserApi = {
+    getUsers: (setUsers) => {
         fetch(URI)
             .then((result) => {
                 return result.json(result)
             })
             .then( data => {
-                setCars( data )
+                setUsers( data )
             })
             .catch( (error) => {
                 console.error(error)
             })
     },
 
-    addCars: (car) => {
+    addUsers: (user) => {
         fetch( URI, {
             method: "POST", 
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify( car )
+            body: JSON.stringify( user )
         })
             .then( response => response.json())
             .then( data => {
-                alert( "Car Registered to Sell: " + JSON.stringify( data ))
+                alert( "Successfuly Created Account: " + JSON.stringify( data ))
             })
             .catch(error => console.error( error ))
     }
 }
 
-export default CarApi;
+export default UserApi;
