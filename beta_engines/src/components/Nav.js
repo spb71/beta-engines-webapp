@@ -16,13 +16,13 @@ const Nav = props => {
                         <ul className="navbar-nav">
 
                             <li className="nav-item">
-                                <Link className="nav-link" to="reg">Register</Link>
+                                <Link className="nav-link" to="reg" id="navbar">Register</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="log">Login</Link>
+                                <Link className="nav-link" to="log" id="navbar">Login</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="view">Cars for Sale</Link>
+                                <Link className="nav-link" to="view" id="navbar">Cars for Sale</Link>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,6 +42,8 @@ const Nav = props => {
         </div>
     );
 };
+
+
 
 
 
