@@ -1,4 +1,5 @@
-const URI = ""
+// const URI = "http://localhost:8080/api/cars"
+const URI = "jdbc:mysql://database-3.czouzu240ute.us-east-1.rds.amazonaws.com/capstone_db"
 
 const CarApi = {
     getCars: (setCars) => {
