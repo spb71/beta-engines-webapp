@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React, {useState} from 'react';
 import UserApi from '../apis/UserApi';
 import { Link } from 'react-router-dom';
@@ -34,13 +35,28 @@ const RegisterForm = props => {
 
     
 
+=======
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const RegisterForm = props => {
+    const submit = () => {}
+>>>>>>> Stashed changes
     return (
 
         <div style={{ border: "1px black solid", padding: "15px", margin: "15px" }}>
 
+<<<<<<< Updated upstream
 
 
             <form onSubmit={handleSubmit}>
+=======
+        
+
+            
+            <form onSubmit={submit}>
+>>>>>>> Stashed changes
                 <h3>Sign Up</h3>
                 <div className="mb-3">
                     <label>First name</label>
@@ -81,7 +97,10 @@ const RegisterForm = props => {
                 <p className="forgot-password text-right">
                     Already registered? <Link className="nav-link" to="/log" style={{ "textDecoration": "underline", "color": "blue" }}>Sign in</Link>
                 </p>
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
             </form>
         </div>
     );
