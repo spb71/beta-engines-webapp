@@ -1,5 +1,5 @@
 
-import CarApi from '../apis/CarApi';
+// import CarApi from '../apis/CarApi';
 
 import React, { useState } from 'react';
 import AddCarApi from '../apis/AddCarApi';
@@ -8,7 +8,7 @@ import AddCarApi from '../apis/AddCarApi';
 
 const Sell = props => {
 
-    const [vim, setVim] = useState('0')
+    const [vin, setVin] = useState('0')
     const [make, setMake] = useState('')
     const [model, setModel] = useState('')
     const [type, setType] = useState('')
@@ -19,7 +19,7 @@ const Sell = props => {
 
     const handleRegister = (event) => {
         const car = {
-            "vim": vim,
+            "vin": vin,
             "make": make,
             "model": model,
             "vehicle_type": type,
@@ -31,7 +31,7 @@ const Sell = props => {
 
         AddCarApi.addCars(car)
 
-        setVim(0)
+        setVin(0)
         setMake('')
         setModel('')
         setType('')
@@ -55,7 +55,7 @@ const Sell = props => {
                 <h3>Sell Your Car</h3>
                 <div className="mb-3">
                     <label>Vehicle Identification Number: </label>
-                    <input type="text" className="form-control" placeholder="Enter VIM" onChange={(event) => { setVim(event.target.value) }} />
+                    <input type="text" className="form-control" placeholder="Enter VIN" onChange={(event) => { setVin(event.target.value) }} />
                 </div>
 
                 <div className="mb-3">
