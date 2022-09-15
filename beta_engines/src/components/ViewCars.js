@@ -41,6 +41,9 @@ const ViewCars = props => {
                                 <td>{c.color}</td>
                                 <td>{c.mileage}</td>
                                 <td>{c.price}</td>
+                                <td>
+                                <button className='btn btn-danger'>Delete</button>
+                                </td>
                             </tr>)
                     }
                 </tbody>

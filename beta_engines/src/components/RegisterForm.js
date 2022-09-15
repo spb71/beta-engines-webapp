@@ -10,11 +10,6 @@ const RegisterForm = props => {
 
 
 
-
-
-
-
-
     const [fname, setFname] = useState('')
     const [lname, setLname] = useState('')
     const [email, setEmail] = useState('')
@@ -25,8 +20,8 @@ const RegisterForm = props => {
 
     const handleSubmit = (event) => {
         const user = {
-            "fname": fname,
-            "lname": lname,
+            "first_name": fname,
+            "last_name": lname,
             "email": email,
             "username": username, 
             "password": password
@@ -40,6 +35,7 @@ const RegisterForm = props => {
         setEmail('')
         setUsername('')
         setPassword('')
+        event.preventDefault();
 
 
 

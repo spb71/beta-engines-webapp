@@ -26,8 +26,8 @@ const FindUsers = props => {
 
                 <tbody>
                     {
-                        users.map(u =>
-                            <tr>
+                        users.map((u,i) =>
+                            <tr key={i}>
                                 <td>{u.first_name}</td>
                                 <td>{u.last_name}</td>
                                 <td>{u.username}</td>
