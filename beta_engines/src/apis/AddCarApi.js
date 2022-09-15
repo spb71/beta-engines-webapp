@@ -7,13 +7,13 @@ const AddCarApi = {
         fetch(URI, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.parse(car)
+            body: JSON.stringify(car)
         })
             .then(response => {
                 response.json()
             })
             .then(data => {
-                alert("Car Registered to Sell: " + JSON.parse(data))
+                alert("Car Registered to Sell: " + JSON.stringify(data))
             })
             .catch(error => console.error(error))
     }

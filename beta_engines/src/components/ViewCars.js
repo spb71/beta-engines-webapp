@@ -19,7 +19,6 @@ const ViewCars = props => {
             <table className='table' style={{ color: "white", width: "70%", margin: "auto" }}>
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Make</th>
                         <th>Model</th>
                         <th>Vehicle Type</th>
@@ -34,8 +33,7 @@ const ViewCars = props => {
                 <tbody>
                     {
                         cars.map((c, i) =>
-                            <tr>
-                                <td key={i}>{c.car_id}</td>
+                            <tr key={i}>
                                 <td>{c.make}</td>
                                 <td>{c.model}</td>
                                 <td>{c.vehicle_type}</td>
