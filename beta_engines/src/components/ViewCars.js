@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CarApi from '../apis/CarApi';
 
 
+
 const ViewCars = props => {
 
     const [cars, setCars] = useState([]);
@@ -9,6 +10,10 @@ const ViewCars = props => {
     useEffect(() => {
         CarApi.getCars(setCars)
     }, [])
+
+    const handleDelete = (index,e) => {
+        setCars(cars.filter((c, i) => i !== index));
+    }
 
 
     return (
@@ -32,8 +37,8 @@ const ViewCars = props => {
 
                 <tbody>
                     {
-                        cars.map((c, i) =>
-                            <tr key={i}>
+                        cars.map((c, index) =>
+                            <tr key={index}>
                                 <td>{c.make}</td>
                                 <td>{c.model}</td>
                                 <td>{c.vehicle_type}</td>
@@ -42,7 +47,8 @@ const ViewCars = props => {
                                 <td>{c.mileage}</td>
                                 <td>{c.price}</td>
                                 <td>
-                                <button className='btn btn-danger'>Delete</button>
+                                <button className='btn btn-danger' onClick={e => handleDelete(index, e)}>Delete</button>
+                                <button className='btn btn-primary'>Update</button>
                                 </td>
                             </tr>)
                     }
