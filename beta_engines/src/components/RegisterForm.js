@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream
 import React, {useState} from 'react';
 import UserApi from '../apis/UserApi';
+=======
+import React, { useState } from 'react';
+import AddUserApi from '../apis/AddUserApi';
+>>>>>>> Stashed changes
 import { Link } from 'react-router-dom';
 
 const RegisterForm = props => {
@@ -12,6 +17,7 @@ const RegisterForm = props => {
         const [password, setPassword] = useState('')
      
 
+<<<<<<< Updated upstream
         const handleSubmit = (event) => {
             const user = {
                 "fname": fname,
@@ -20,14 +26,41 @@ const RegisterForm = props => {
                 "password": password
                 
             }
+=======
+    const [fname, setFname] = useState('')
+    const [lname, setLname] = useState('')
+    const [email, setEmail] = useState('')
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+>>>>>>> Stashed changes
 
             UserApi.addUsers(user)
 
+<<<<<<< Updated upstream
             setFname('')
             setLname('')
             setEmail('')
             setPassword('')
             
+=======
+    const handleSubmit = (event) => {
+        const user = {
+            "fname": fname,
+            "lname": lname,
+            "email": email,
+            "username": username,
+            "password": password
+
+        }
+
+        AddUserApi.addUsers(user)
+
+        setFname('')
+        setLname('')
+        setEmail('')
+        setUsername('')
+        setPassword('')
+>>>>>>> Stashed changes
 
 
         }
@@ -60,8 +93,22 @@ const RegisterForm = props => {
                     <input
                         type="email"
                         className="form-control"
+<<<<<<< Updated upstream
                         placeholder="Enter email"
                         onChange={ (event) => { setEmail(event.target.value) } }
+=======
+                        placeholder="Enter email address"
+                        onChange={(event) => { setEmail(event.target.value) }}
+>>>>>>> Stashed changes
+                    />
+                </div>
+                <div className="mb-3">
+                    <label>Username</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Enter username"
+                        onChange={(event) => { setUsername(event.target.value) }}
                     />
                 </div>
                 <div className="mb-3">

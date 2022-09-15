@@ -8,7 +8,8 @@ import RegisterForm from './components/RegisterForm';
 import SellCars from './components/SellCars';
 import UpdateCars from './components/UpdateCars';
 import ViewCars from './components/ViewCars';
-import BuyCars from './components/BuyCars';
+
+import FindUsers from './components/FindUsers';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="/view" element={<ViewCars />} />
         <Route path="/sell" element={<SellCars />} />
         <Route path="/update" element={<UpdateCars />} />
-        <Route path="/buy" element={<BuyCars />} />
+        <Route path="/user" element={<FindUsers />} />
 
       </Routes>
     </div>

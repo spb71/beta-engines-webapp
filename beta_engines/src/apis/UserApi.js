@@ -1,4 +1,4 @@
-const URI = ""
+const URI = "http://gangstaappbetaengines-env.eba-yzzcuhj6.us-east-1.elasticbeanstalk.com/api/account"
 
 const UserApi = {
     getUsers: (setUsers) => {
@@ -12,20 +12,8 @@ const UserApi = {
             .catch( (error) => {
                 console.error(error)
             })
-    },
-
-    addUsers: (user) => {
-        fetch( URI, {
-            method: "POST", 
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify( user )
-        })
-            .then( response => response.json())
-            .then( data => {
-                alert( "Successfuly Created Account: " + JSON.stringify( data ))
-            })
-            .catch(error => console.error( error ))
     }
+
 }
 
 export default UserApi;
