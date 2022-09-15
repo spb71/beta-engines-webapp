@@ -3,9 +3,9 @@ import React from 'react';
 
 const Update = props => {
     return (
-        <div style={{ border: "1px black solid", padding: "15px", margin: "15px" }}>
+        <div style={{ border: "1px white solid", padding: "15px", margin: "15px" }}>
 
-            
+
 
             <form>
                 <h3>Sign Up</h3>
@@ -38,11 +38,11 @@ const Update = props => {
                     />
                 </div>
                 <div className="d-grid">
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" className="btn btn-success">
                         Sign Up
                     </button>
                 </div>
-                
+
 
             </form>
         </div>
