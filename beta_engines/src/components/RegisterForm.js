@@ -35,7 +35,7 @@ const RegisterForm = props => {
         setEmail('')
         setUsername('')
         setPassword('')
-        event.preventDefault();
+        
 
 
 
