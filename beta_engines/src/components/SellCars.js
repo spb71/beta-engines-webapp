@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+
 import CarApi from '../apis/CarApi';
+
+import React, { useState } from 'react';
+import AddCarApi from '../apis/AddCarApi';
+
 
 
 const Sell = props => {
@@ -18,14 +22,14 @@ const Sell = props => {
             "vim": vim,
             "make": make,
             "model": model,
-            "type": type,
-            "year": year,
+            "vehicle_type": type,
+            "vehicle_year": year,
             "color": color,
             "mileage": mileage,
             "price": price,
         }
 
-        CarApi.addCars(car)
+        AddCarApi.addCars(car)
 
         setVim(0)
         setMake('')
@@ -61,7 +65,10 @@ const Sell = props => {
 
                 <div className="mb-3">
                     <label>Model: </label>
+
+
                     <input type="text" className="form-control" placeholder="Last Car Model" onChange={(event) => { setModel(event.target.value) }} />
+
                 </div>
 
                 <div className="mb-3">
@@ -81,14 +88,20 @@ const Sell = props => {
 
                 <div className="mb-3">
                     <label>Mileage: </label>
+
+
                     <input type="text" className="form-control" placeholder="Last Car Mileage" onChange={(event) => { setMileage(event.target.value) }} />
+
                 </div>
                 <div className="mb-3">
                     <label>Price: </label>
                     <input type="text" className="form-control" placeholder="Selling Price" onChange={(event) => { setPrice(event.target.value) }} />
                 </div>
                 <div className="d-grid">
+
+
                     <button type="submit" className="btn btn-success">
+
                         Register Vehicle
                     </button>
                 </div>

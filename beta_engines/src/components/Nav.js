@@ -29,7 +29,7 @@ const Nav = props => {
                                     Profile
                                 </a>
                                 <ul className="dropdown-menu dropdown-menu-dark">
-                                    <Link className="nav-link" to="buy">Buy Cars</Link>
+                                    <Link className="nav-link" to="user">Find Users</Link>
                                     <Link className="nav-link" to="sell">Sell Cars</Link>
                                     <Link className="nav-link" to="update">Update Sale Information</Link>
                                 </ul>
