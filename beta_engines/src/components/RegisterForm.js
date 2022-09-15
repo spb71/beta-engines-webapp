@@ -1,11 +1,17 @@
 
-import UserApi from '../apis/UserApi';
+
 
 import React, { useState } from 'react';
+import AddUserApi from '../apis/AddUserApi';
 
 import { Link } from 'react-router-dom';
 
 const RegisterForm = props => {
+
+
+
+
+
 
 
 
@@ -22,12 +28,12 @@ const RegisterForm = props => {
             "fname": fname,
             "lname": lname,
             "email": email,
-            "username": username,
+            "username": username, 
             "password": password
 
         }
 
-        UserApi.addUsers(user)
+        AddUserApi.addUsers(user)
 
         setFname('')
         setLname('')
@@ -67,6 +73,7 @@ const RegisterForm = props => {
                     <input
                         type="email"
                         className="form-control"
+                        onChange={(event) => { setEmail(event.target.value) }}
 
                     />
                 </div>
@@ -77,6 +84,8 @@ const RegisterForm = props => {
                         className="form-control"
                         placeholder="Enter username"
                         onChange={(event) => { setUsername(event.target.value) }}
+
+                        
 
                     />
                 </div>
