@@ -10,8 +10,8 @@ const LoginForm = props => {
 
 
     return (
-        <div style={{ border: "1px black solid", padding: "15px", margin: "15px" }}>
-            
+        <div style={{ border: "1px white solid", padding: "15px", margin: "15px" }}>
+
             <form onSubmit={submit}>
                 <h3>Sign In</h3>
                 <div className="mb-3">
@@ -43,7 +43,7 @@ const LoginForm = props => {
                     </div>
                 </div>
                 <div className="d-grid">
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" className="btn btn-success">
                         Submit
                     </button>
                 </div>
